@@ -1,0 +1,24 @@
+[ req ]
+default_bits       = 2048
+distinguished_name = req_distinguished_name
+req_extensions     = req_ext
+[ req_distinguished_name ]
+countryName                  = Country Name (2 letter code)
+countryName_default          = US
+stateOrProvinceName          = State or Province Name (full name)
+stateOrProvinceName_default  = Illinois
+localityName                 = Locality Name (eg, city)
+localityName_default         = Chicago
+organizationName             = Organization Name (eg, company)
+organizationName_default     = My Awesome Corporation
+commonName                   = Common Name (eg, fully qualified host name)
+commonName_default           = awesomecorp.com
+[ req_ext ]
+subjectAltName = @alt_names
+[ alt_names ]
+DNS.1 = awesomecorp.com
+# DNS.2 = anotherdomain.com
+# IP.1 = 172.16.0.1
+# IP.2 = 172.16.0.2
+[ CA_default ]
+copy_extensions = copy
